@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#07090b">
+<meta name="description" content="15 Facts • 15 August • India — a cinematic editorial journey through India's history, symbols and progress.">
+<title>15 Facts • 15 August • India — Somraj Pal</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+:root{
+  --bg:#07090b; --panel:#0d1014; --text:#f3f2ed; --muted:#9a9da3;
+  --saffron:#ff8a24; --green:#2fb36b; --blue:#1d5fa7; --line:rgba(255,255,255,.10);
+  --ease:cubic-bezier(.2,.8,.2,1);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;background:var(--bg)}
+body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,sans-serif;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:20;opacity:.045;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.5'/%3E%3C/svg%3E")}
+a{color:inherit}
+button{font:inherit}
+::selection{background:rgba(255,138,36,.25)}
+.topbar{position:fixed;z-index:30;top:0;left:0;right:0;height:74px;padding:0 4vw;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid transparent;background:linear-gradient(to bottom,rgba(7,9,11,.82),transparent);transition:.4s}
+.topbar.scrolled{background:rgba(7,9,11,.78);backdrop-filter:blur(16px);border-color:var(--line)}
+.brand{font-size:16px;font-weight:900;letter-spacing:.18em}
+.brand span{color:var(--saffron)}
+.topmeta{font:11px "DM Mono",monospace;color:var(--muted);letter-spacing:.12em}
+.hero,.fact{min-height:100svh;position:relative;display:grid;align-items:center;padding:110px 8vw 80px;overflow:hidden}
+.hero{place-items:center;text-align:center}
+.hero:before,.fact:before{content:"";position:absolute;width:65vw;height:65vw;border-radius:50%;background:radial-gradient(circle,rgba(255,138,36,.13),transparent 62%);top:-30%;right:-20%;filter:blur(20px);pointer-events:none}
+.hero:after{content:"";position:absolute;width:60vw;height:60vw;border-radius:50%;background:radial-gradient(circle,rgba(47,179,107,.09),transparent 65%);bottom:-35%;left:-25%;pointer-events:none}
+.hero-content{position:relative;z-index:2;max-width:1000px}
+.eyebrow{font:11px "DM Mono",monospace;letter-spacing:.22em;color:#aeb1b5;margin-bottom:22px;text-transform:uppercase}
+.hero h1{font-size:clamp(58px,11vw,154px);line-height:.83;letter-spacing:-.075em;margin:0;font-weight:900}
+.hero h1 .line2{display:block;background:linear-gradient(100deg,#fff 15%,#fff 45%,var(--saffron) 65%,var(--green));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{max-width:620px;margin:32px auto 0;color:#b4b6bb;font-size:clamp(15px,1.7vw,20px);line-height:1.7}
+.enter{margin-top:42px;display:inline-flex;align-items:center;gap:16px;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.035);color:#fff;padding:15px 19px;border-radius:999px;text-decoration:none;font-size:12px;font-weight:700;letter-spacing:.12em;transition:.3s}
+.enter:hover{transform:translateY(-3px);border-color:rgba(255,255,255,.38);background:rgba(255,255,255,.07)}
+.enter i{font-style:normal;color:var(--saffron);font-size:18px}
+.hero-note{margin-top:22px;font:10px "DM Mono",monospace;color:#666b72;letter-spacing:.08em}
+.author-credit{margin-top:26px;font-size:13px;font-weight:800;letter-spacing:.16em;color:#e9e8e2}
+.author-credit span{color:var(--saffron);padding:0 7px}
+
+.chakra{position:absolute;width:min(38vw,430px);aspect-ratio:1;border:1px solid rgba(255,255,255,.045);border-radius:50%;right:-9vw;top:22%;opacity:.65;animation:spin 60s linear infinite}
+.chakra:before,.chakra:after{content:"";position:absolute;inset:8%;border:1px solid rgba(255,255,255,.035);border-radius:50%}
+.chakra:after{inset:18%}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+.fact{grid-template-columns:minmax(80px,.5fr) minmax(0,2fr) minmax(220px,.8fr);gap:5vw;border-top:1px solid var(--line)}
+.fact-num{align-self:start;padding-top:6px;font:12px "DM Mono",monospace;color:#676c73;letter-spacing:.1em}
+.fact-num strong{font-size:clamp(45px,7vw,90px);display:block;color:#e8e7e1;letter-spacing:-.08em;line-height:.9}
+.fact-copy{max-width:850px}
+.fact-kicker{font:11px "DM Mono",monospace;letter-spacing:.18em;color:var(--saffron);text-transform:uppercase;margin-bottom:20px}
+.fact h2{font-size:clamp(40px,6.7vw,100px);line-height:.92;letter-spacing:-.065em;margin:0 0 30px;max-width:850px}
+.fact p{font-size:clamp(16px,1.6vw,20px);line-height:1.75;color:#b7b9bd;max-width:730px;margin:0}
+.fact p strong{color:#fff}
+.fact-meta{align-self:end;border-left:1px solid var(--line);padding-left:24px}
+.fact-meta .date{font:12px "DM Mono",monospace;color:#e8e7e1;margin-bottom:12px}
+.fact-meta .source{font-size:11px;line-height:1.6;color:#70757c}
+.fact-meta .source a{color:#aeb2b7;text-decoration:none;border-bottom:1px solid #333}
+.fact-meta .source a:hover{color:#fff}
+.accent-saffron .fact-kicker{color:var(--saffron)}
+.accent-green .fact-kicker{color:var(--green)}
+.accent-blue .fact-kicker{color:#5e9be1}
+.fact:nth-of-type(odd):after{content:"";position:absolute;inset:auto -20% -45% auto;width:55vw;height:55vw;border-radius:50%;background:radial-gradient(circle,rgba(29,95,167,.09),transparent 67%);pointer-events:none}
+.fact:nth-of-type(even):after{content:"";position:absolute;inset:-35% auto auto -20%;width:55vw;height:55vw;border-radius:50%;background:radial-gradient(circle,rgba(255,138,36,.07),transparent 67%);pointer-events:none}
+
+.visual{position:relative;min-height:280px;display:grid;place-items:center;z-index:1}
+.visual .ring{width:min(22vw,270px);aspect-ratio:1;border:1px solid rgba(255,255,255,.12);border-radius:50%;position:relative}
+.visual .ring:before{content:"";position:absolute;inset:14%;border:1px solid rgba(255,255,255,.08);border-radius:50%}
+.visual .ring:after{content:"";position:absolute;inset:30%;border-radius:50%;background:radial-gradient(circle,rgba(255,138,36,.35),transparent 65%);filter:blur(10px)}
+.visual .bigword{font-size:clamp(55px,8vw,110px);font-weight:900;letter-spacing:-.08em;color:#fff;opacity:.08;position:absolute;white-space:nowrap}
+.visual .date-big{font:12px "DM Mono",monospace;color:#8b9097;letter-spacing:.18em;position:absolute}
+.progress{position:fixed;z-index:31;left:0;top:0;height:2px;width:0;background:linear-gradient(90deg,var(--saffron),#fff,var(--green));box-shadow:0 0 18px rgba(255,138,36,.35)}
+.sidecount{position:fixed;z-index:30;right:4vw;bottom:30px;font:11px "DM Mono",monospace;color:#7c8188;letter-spacing:.12em}
+.dots{position:fixed;z-index:30;left:4vw;bottom:30px;display:flex;gap:7px}
+.dot{width:4px;height:4px;border-radius:50%;background:#45494e;transition:.3s}
+.dot.active{width:22px;border-radius:4px;background:linear-gradient(90deg,var(--saffron),var(--green))}
+footer{min-height:55vh;padding:120px 8vw;display:grid;place-items:center;text-align:center;border-top:1px solid var(--line);position:relative;overflow:hidden}
+footer h2{font-size:clamp(45px,8vw,110px);line-height:.9;letter-spacing:-.07em;margin:0;max-width:1000px}
+footer h2 span{color:var(--saffron)}
+footer p{color:#898d93;margin:30px auto 0;max-width:600px;line-height:1.7}
+.footer-brand{font:11px "DM Mono",monospace;letter-spacing:.22em;color:#666b72;margin-top:55px}
+.reveal{opacity:0;transform:translateY(35px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+.reveal.visible{opacity:1;transform:none}
+@media(max-width:850px){
+  .topbar{height:62px;padding:0 20px}.topmeta{display:none}
+  .hero,.fact{padding:100px 24px 90px;min-height:100svh}
+  .hero h1{font-size:clamp(58px,18vw,110px)}
+  .fact{grid-template-columns:1fr;gap:24px;align-content:center}
+  .fact-num{padding:0}.fact-num strong{font-size:54px}
+  .fact h2{font-size:clamp(42px,12vw,76px);margin-bottom:22px}
+  .fact p{font-size:16px;line-height:1.65}
+  .fact-meta{border-left:0;border-top:1px solid var(--line);padding:16px 0 0}
+  .visual{position:absolute;right:-80px;bottom:60px;opacity:.55;pointer-events:none}
+  .visual .ring{width:230px}
+  .dots{display:none}.sidecount{right:20px;bottom:20px}.author-credit{font-size:11px;letter-spacing:.12em}
+  .chakra{width:70vw;right:-35vw}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}.chakra{animation:none}.reveal{transition:none}
+}
+</style>
+</head>
+<body>
+<div class="progress" id="progress"></div>
+<header class="topbar" id="topbar">
+  <div class="brand">VOID <span>MONARCH</span></div>
+  <div class="topmeta">15 FACTS / 15 AUGUST / INDIA</div>
+</header>
+
+<main>
+<section class="hero" id="hero">
+  <div class="chakra"></div>
+  <div class="hero-content reveal">
+    <div class="eyebrow">A cinematic editorial experience</div>
+    <h1>15 FACTS<span class="line2">15 AUGUST</span></h1>
+    <p>Not another Independence Day forward. A short journey through the lesser-known stories, symbols and milestones that shaped modern India.</p>
+    <a class="enter" href="#fact-1">ENTER THE JOURNEY <i>↓</i></a>
+    <div class="hero-note">SCROLL / SWIPE / EXPLORE</div>
+    <div class="author-credit">SOMRAJ PAL <span>·</span> A PERSONAL EDITORIAL PROJECT</div>
+  </div>
+</section>
+
+<div id="facts"></div>
+
+<footer class="reveal">
+  <div>
+    <div class="eyebrow">15 / 15 — THE LAST FACT</div>
+    <h2>WE INHERITED <span>INDEPENDENCE.</span><br>WHAT WILL WE LEAVE BEHIND?</h2>
+    <p>History is not only something we remember. It is something every generation continues.</p>
+    <div class="footer-brand">SOMRAJ PAL · A PERSONAL EDITORIAL PROJECT · 15 AUGUST 2026</div>
+  </div>
+</footer>
+</main>
+
+<div class="dots" id="dots"></div>
+<div class="sidecount" id="sidecount">00 / 15</div>
+
+<script>
+const facts = [
+ {k:"THE FLAG",title:"THE FLAG WAS CHOSEN<br>BEFORE INDEPENDENCE.",text:"India's present national flag was adopted by the Constituent Assembly on <strong>22 July 1947</strong>—just 24 days before independence. It became the official flag of the Dominion of India on 15 August 1947.",date:"22 JULY 1947",source:"National Portal of India",url:"https://knowindia.india.gov.in/my-india-my-pride/indian-tricolor.php",a:"saffron",v:"1947"},
+ {k:"24 SPOKES",title:"COUNT<br>THEM.",text:"The Ashoka Chakra contains exactly <strong>24 equally spaced spokes</strong>. Its design comes from the wheel on the abacus of the Sarnath Lion Capital of Ashoka.",date:"24 SPOKES",source:"National Portal of India",url:"https://knowindia.india.gov.in/my-india-my-pride/indian-tricolor.php",a:"blue",v:"24"},
+ {k:"THE FLAG CODE",title:"2002<br>CHANGED SOMETHING.",text:"The Flag Code of India was modified in <strong>2002</strong>. The modern code sets out rules for displaying the national flag and its respectful use by citizens and institutions.",date:"FLAG CODE • 2002",source:"Ministry of Home Affairs",url:"https://www.mha.gov.in/sites/default/files/FlagCode_E_31122021.pdf",a:"green",v:"2002"},
+ {k:"POSTAL HISTORY",title:"INDIA'S FIRST<br>POSTAGE STAMP.",text:"India's first postage stamp was issued in the <strong>Sindh region in 1852</strong>. The famous Scinde Dawk is an early milestone in the history of India's postal system.",date:"1852",source:"India Post",url:"https://www.indiapost.gov.in/Documents/PostalHistory/FIRST_POSTAGE_STAMP_1852.pdf",a:"saffron",v:"1852"},
+ {k:"POSTAL NETWORK",title:"A POSTAL NETWORK<br>BUILT FOR A CONTINENT.",text:"India Post's network grew from <strong>23,344 post offices at independence</strong> to a nationwide network serving urban and rural India. Its scale is one of the country's quiet infrastructure stories.",date:"1947 → TODAY",source:"Department of Posts",url:"https://www.indiapost.gov.in/po-network",a:"green",v:"POST"},
+ {k:"AUGUST × SPACE",title:"15 AUGUST<br>HAS ANOTHER CONNECTION.",text:"India became independent on <strong>15 August 1947</strong>. On <strong>15 August 1969</strong>, the Indian Space Research Organisation (ISRO) was formed—another milestone in India's long technological journey.",date:"1947 → 1969",source:"ISRO / Government of India",url:"https://www.isro.gov.in/",a:"blue",v:"1969"},
+ {k:"INDIA GOES TO SPACE",title:"THE FIRST INDIAN<br>SATELLITE.",text:"<strong>Aryabhata</strong>, India's first satellite, was designed and fabricated in India and launched on <strong>19 April 1975</strong> by a Soviet launch vehicle from Kapustin Yar.",date:"19 APRIL 1975",source:"ISRO",url:"https://www.isro.gov.in/aryabhata_1.html",a:"blue",v:"1975"},
+ {k:"AUGUST KRANTI",title:"AUGUST WAS ALREADY<br>A REVOLUTIONARY MONTH.",text:"The Quit India Movement began in <strong>August 1942</strong>. On 8 August, Gandhi gave the famous call associated with the movement: <strong>“Do or Die.”</strong>",date:"8 AUGUST 1942",source:"Ministry of Culture",url:"https://amritmahotsav.nic.in/blogdetail.htm?7%2FQuit_India_Movement=",a:"saffron",v:"1942"},
+ {k:"THE FIRST VOTE",title:"INDEPENDENT INDIA<br>CHOSE DEMOCRACY.",text:"India's first general election was held in <strong>1951–52</strong>. It was a landmark democratic exercise in a newly independent country.",date:"1951–52",source:"Election Commission of India",url:"https://www.eci.gov.in/",a:"green",v:"VOTE"},
+ {k:"THE RUPEE",title:"THE GOVERNMENT<br>TOOK CONTROL OF NOTE ISSUE.",text:"The <strong>Paper Currency Act of 1861</strong> gave the Government of India the monopoly over issuing paper currency. The Reserve Bank of India was established much later, in 1935.",date:"1861",source:"Reserve Bank of India",url:"https://m.rbi.org.in/Scripts/ic_retrospectcurrency.aspx",a:"saffron",v:"₹"},
+ {k:"TELEVISION",title:"INDIAN TELEVISION<br>STARTED AS AN EXPERIMENT.",text:"Television broadcasting began in India on <strong>15 September 1959</strong> as a modest public-service experiment in Delhi. That experiment eventually grew into Doordarshan.",date:"15 SEPTEMBER 1959",source:"Doordarshan / Prasar Bharati",url:"https://www.doordarshan.gov.in/about-doordarshan/",a:"blue",v:"1959"},
+ {k:"BEFORE 15 AUGUST",title:"15 AUGUST WASN'T<br>THE FIRST INDEPENDENCE DAY.",text:"The Indian National Congress had observed <strong>26 January 1930</strong> as Independence Day after declaring complete independence as its goal. The date later became India's Republic Day.",date:"26 JANUARY 1930",source:"Ministry of Culture",url:"https://cmsadmin.amritmahotsav.nic.in/event-detail.htm?126057=",a:"saffron",v:"1930"},
+ {k:"THE CONSTITUTION",title:"INDEPENDENCE<br>WASN'T THE END.",text:"India's Constitution was <strong>adopted on 26 November 1949</strong>. It created the constitutional framework through which the people of India would govern themselves.",date:"26 NOVEMBER 1949",source:"Constitution of India",url:"https://www.constitutionofindia.net/",a:"green",v:"1949"},
+ {k:"UNIVERSAL FRANCHISE",title:"INDIA TRUSTED<br>ITS PEOPLE.",text:"Independent India adopted <strong>universal adult franchise</strong>, making participation in choosing representatives a foundational part of the new republic's democratic system.",date:"THE FIRST ELECTIONS",source:"Election Commission of India",url:"https://www.eci.gov.in/",a:"blue",v:"1 PERSON"},
+ {k:"THE LAST FACT",title:"THE MOST IMPORTANT<br>FACT ISN'T ABOUT 1947.",text:"It's about <strong>what happens next</strong>. Every generation inherits a version of India—and every generation gets the chance to change it. <br><br><strong>We inherited independence. What will we leave behind?</strong>",date:"15 AUGUST 2026",source:"SOMRAJ PAL • EDITORIAL",url:"#",a:"saffron",v:"NEXT"}
+];
+
+const container = document.getElementById("facts");
+const dots = document.getElementById("dots");
+
+facts.forEach((f,i)=>{
+  const sec=document.createElement("section");
+  sec.className=`fact accent-${f.a}`;
+  sec.id=`fact-${i+1}`;
+  sec.innerHTML=`
+    <div class="fact-num reveal"><strong>${String(i+1).padStart(2,"0")}</strong> / 15</div>
+    <div class="fact-copy reveal">
+      <div class="fact-kicker">${f.k}</div>
+      <h2>${f.title}</h2>
+      <p>${f.text}</p>
+    </div>
+    <div class="fact-meta reveal">
+      <div class="date">${f.date}</div>
+      <div class="source">SOURCE<br><a href="${f.url}" target="_blank" rel="noopener">${f.source}</a></div>
+    </div>
+    <div class="visual">
+      <div class="ring"></div>
+      <div class="bigword">${f.v}</div>
+      <div class="date-big">${String(i+1).padStart(2,"0")} / 15</div>
+    </div>`;
+  container.appendChild(sec);
+
+  const d=document.createElement("div");
+  d.className="dot";
+  d.title=`Fact ${i+1}`;
+  d.addEventListener("click",()=>sec.scrollIntoView({behavior:"smooth"}));
+  dots.appendChild(d);
+});
+
+const allSections=[document.getElementById("hero"),...document.querySelectorAll(".fact"),document.querySelector("footer")];
+const side=document.getElementById("sidecount");
+const bar=document.getElementById("progress");
+const topbar=document.getElementById("topbar");
+const dotEls=[...document.querySelectorAll(".dot")];
+
+const observer=new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      entry.target.querySelectorAll(".reveal").forEach((el,j)=>{
+        setTimeout(()=>el.classList.add("visible"),j*80);
+      });
+      if(entry.target.classList.contains("fact")){
+        const n=Number(entry.target.id.split("-")[1]);
+        side.textContent=`${String(n).padStart(2,"0")} / 15`;
+        dotEls.forEach((d,j)=>d.classList.toggle("active",j===n-1));
+      }else if(entry.target.id==="hero"){
+        side.textContent="00 / 15";
+        dotEls.forEach(d=>d.classList.remove("active"));
+      }else{
+        side.textContent="15 / 15";
+        dotEls.forEach(d=>d.classList.remove("active"));
+      }
+    }
+  });
+},{threshold:.45});
+allSections.forEach(s=>observer.observe(s));
+
+window.addEventListener("scroll",()=>{
+  const max=document.documentElement.scrollHeight-innerHeight;
+  bar.style.width=(max>0?(scrollY/max)*100:0)+"%";
+  topbar.classList.toggle("scrolled",scrollY>30);
+},{passive:true});
+
+document.addEventListener("keydown",e=>{
+  if(e.key==="ArrowDown"){
+    const idx=allSections.findIndex(s=>s.getBoundingClientRect().top>10);
+    (allSections[Math.min(idx+1,allSections.length-1)]||allSections[1]).scrollIntoView({behavior:"smooth"});
+  }
+  if(e.key==="ArrowUp"){
+    const idx=allSections.findIndex(s=>s.getBoundingClientRect().top>10);
+    allSections[Math.max(0,idx-1)].scrollIntoView({behavior:"smooth"});
+  }
+});
+</script>
+</body>
+</html>
